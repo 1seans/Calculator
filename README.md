@@ -1,2 +1,2 @@
 # Calculator
-Calculator 
+This is a code snippet for a calculator using the React library and the useReducer hook. The code defines a reducer function that handles different actions (such as adding a digit, choosing an operation, clearing the calculator, deleting a digit, or evaluating the current calculation) to update the state of the calculator. The state includes properties such as the current operand, previous operand, operation, and overwrite flag. The code also defines a evaluate function that performs the calculation based on the operation and operands, and a INTEGER_FORMATTER for formatting the output. The DigitButton and OperationButton components are also imported but not shown in this snippet.
