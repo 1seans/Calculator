@@ -1,0 +1,75 @@
+@media (max-width: 600px) {
+  .calculator-grid {
+    grid-template-columns: repeat(2, 6rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .calculator-grid {
+    grid-template-columns: repeat(1, 6rem);
+  }
+}
+
+
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  background: linear-gradient(to right, #00aaff, #00ff63);
+}
+
+.calculator-gride{
+  display: grid;
+  justify-content: center;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  /* output box starts at and it to expand if there is a large number in there */
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem) ;
+}
+
+.calculator-gride button{
+cursor: pointer;
+color: rgba(0, 0, 0, .70);
+font-size: 2rem;
+border: 1px solid white;
+outline: none;
+background-color: rgba(255, 255, 255, .65);
+}
+
+.calculator-gride button:hover,
+.calculator-gride button:focus{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.span-two{
+  grid-column: span 2; /* makes the 2 buttons spans 2 colums (AC & =)*/
+}
+
+.output{
+  grid-column: 1 / -1;
+  /* first 3 values are red, green, and blue (0, 0, 0) which makes black color,The last value, .75, is the alpha value controls the transparency  */
+  background-color: rgba(0, 0, 0, .60);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word; /* make the nubers wrap in the oitput cantainer */
+  word-break: break-all; /* allows the numbers to wrap on to the next line if there is a long number */
+}
+
+.output .previous-operand{
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand{
+  color: white;
+  font-size: 2.5rem;
+}
